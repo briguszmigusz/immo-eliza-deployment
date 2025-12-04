@@ -7,6 +7,18 @@ st.set_page_config(page_title="Immo Eliza Price Predictor",
     page_icon="🏡",
     layout="wide")
 
+# Sidebar information
+st.sidebar.markdown("""
+ℹ️
+**Immo Eliza Price Predictor** estimates real estate prices in Belgium  
+based on property features such as size, location, condition, and amenities.
+
+## 📌 Disclaimer
+- This tool is part of a **learning project** created during the AI Bootcamp at **BeCode.org**.
+- Predictions are **not 100% accurate** and should **not** be used as professional financial advice.
+- The model is trained on a limited dataset and provides only an **approximate** estimation.
+""")
+
 # Setting up the background picture
 def set_bg(image_file):
     with open(image_file, "rb") as f:
@@ -25,12 +37,10 @@ def set_bg(image_file):
         </style>
     """, unsafe_allow_html=True)
 
-# Adding a togglebar to change dark and light mode
-# Place toggle in the top-right corner using columns
+# Adding a togglebar on the right to change dark and light mode using columns
 col_toggle_1, col_toggle_2 = st.columns([6,1])
 with col_toggle_2:
     mode = st.toggle("🌗 Dark/Light mode")
-
 
 # Changing background according to dark/light mode
 if mode:
