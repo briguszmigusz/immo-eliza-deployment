@@ -1,0 +1,5 @@
+__pycache__
+.venv
+background_dark.jpg
+background_light.jpg
+pyproject.toml
