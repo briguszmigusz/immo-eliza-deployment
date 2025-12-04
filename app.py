@@ -38,7 +38,7 @@ def set_bg(image_file):
     """, unsafe_allow_html=True)
 
 # Adding a togglebar on the right to change dark and light mode using columns
-col_toggle_1, col_toggle_2 = st.columns([6,1])
+col_toggle_1, col_toggle_2 = st.columns([4,1])
 with col_toggle_2:
     mode = st.toggle("🌗 Dark/Light mode")
 
